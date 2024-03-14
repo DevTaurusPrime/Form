@@ -1,0 +1,75 @@
+.continer {
+    background-image: url(/img/Bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 970px;
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 30px 60px;
+    height: 90svh;
+    box-shadow: 5px 10px 35px gray;
+    position: relative;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container__gray-bg {
+    z-index: 1;
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(64, 64, 75);
+    background: linear-gradient(65deg, rgb(39, 42, 55) 40%, rgba(39, 42, 55, .9) 60%, rgba(39, 42, 55, .7) 100%);
+}
+
+.sign-up__text,
+.signup__form {
+    position: relative;
+    z-index: 2;
+}
+
+.sign-up__text {
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.sign-up__text span {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.sign-up__text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.signup__form {
+    width: 500px;
+    border: 2px solid white;
+
+}
+
+.signup__form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.signup__form input {
+    flex: 1;
+    padding: 5px;
+    margin: 5px;
+}
+
+.signup__form .signup__form-row:nth-child(1),
+.signup__form .signup__form-row:nth-child(2) {
+    flex: 0 0 50%;
+}
+
+.signup__form .signup__form-row:nth-child(3),
+.signup__form .signup__form-row:nth-child(4) {
+    flex: 0 0 100%;
+}
