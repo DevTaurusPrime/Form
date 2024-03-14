@@ -1,3 +1,18 @@
+body {
+    background-color: rgb(218, 218, 218);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --border-radius: 10px;
+    --main-color: rgb(1, 172, 141);
+    --main-gray: rgba(255, 255, 255, 0.6);
+}
+
 .continer {
     background-image: url(/img/Bg.jpg);
     background-repeat: no-repeat;
@@ -6,12 +21,15 @@
     width: 970px;
     margin: 20px auto;
     border-radius: 15px;
-    padding: 30px 60px;
-    height: 90svh;
+    padding: 30px 60px 90px 60px;
+    height: 90vh;
     box-shadow: 5px 10px 35px gray;
     position: relative;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container__gray-bg {
@@ -42,6 +60,25 @@
     font-weight: 500;
 }
 
+.sign-up__text span,
+.sign-up__text p {
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+.sign-up__text a {
+    color: rgb(0, 255, 208);
+    text-decoration: none;
+}
+
+.sign-up__text a:hover {
+    color: rgb(0, 255, 89);
+    text-decoration: underline;
+    transition: all 0.5s ease;
+}
+
+
+
 .sign-up__text h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -49,27 +86,97 @@
 
 .signup__form {
     width: 500px;
-    border: 2px solid white;
 
+}
+
+.signup__form input {
+    background-color: rgb(50, 54, 68);
+    box-sizing: border-box;
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(78, 78, 78, 0.4);
+}
+
+.signup__form input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .signup__form-row {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-.signup__form input {
-    flex: 1;
-    padding: 5px;
-    margin: 5px;
+.signup__form-row input:nth-child(1),
+.signup__form-row input:nth-child(2) {
+    flex: .5;
+
 }
 
-.signup__form .signup__form-row:nth-child(1),
-.signup__form .signup__form-row:nth-child(2) {
-    flex: 0 0 50%;
-}
-
-.signup__form .signup__form-row:nth-child(3),
-.signup__form .signup__form-row:nth-child(4) {
+.signup__form-row input:nth-child(3),
+.signup__form-row input:nth-child(4) {
     flex: 0 0 100%;
+}
+
+.signup__form-row:first-child {
+    margin-bottom: 20px;
+}
+
+.signup__form-row button {
+    flex: 1;
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    background: rgb(69, 74, 93);
+    color: white;
+    border: none;
+    transition: all 0.5s ease;
+    box-shadow: 0px 2px 5px rgba(78, 78, 78, 0.238);
+
+}
+
+.signup__form-row button:hover {
+    background: rgb(109, 115, 137);
+}
+
+.signup__form-row button:active {
+    background: var(--main-color);
+    box-shadow: 0px 2px 5px rgba(9, 251, 207, 0.4);
+
+}
+
+.header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 60px;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.header nav {
+    display: flex;
+}
+
+.header nav a {
+    color: var(--main-gray);
+    transition: all 0.5s ease;
+}
+
+.header nav a:hover {
+    color: rgba(255, 255, 255, 0.837);
+}
+
+.header nav li:nth-child(n+1) {
+    margin-left: 25px;
 }
